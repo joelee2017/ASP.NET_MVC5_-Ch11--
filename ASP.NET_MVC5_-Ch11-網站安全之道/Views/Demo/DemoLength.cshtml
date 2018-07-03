@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "DemoLength";
+}
+
+<h2>DemoLength</h2>
+
+@using (Ajax.BeginForm("LengthCheck", "Demo", new AjaxOptions() { UpdateTargetId = "pwStatus" }))
+{
+    <p>密碼確認：<input type="text" name="pw"></p>
+    <p><input type="submit" value="送出" /></p>
+
+}
+<div id="pwStatus"></div>
+
+@section scripts
+    {
+
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+}
